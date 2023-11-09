@@ -1,0 +1,30 @@
+PORTOFOLIO / GROUP PROJECT /
+
+Movie_app
+
+1] SET UP PLAN
+
+
+ src
+ |
+ pages ___________ home ___Home.js
+ | 			         |_____ShowMovie.js
+							 Mainbanner.js
+
+		  detail ___ Detail.js
+			|__ ...
+
+		  search ___ Search.js
+			  |__ ...
+
+|	        
+components
+		   
+*********		   
+
+index.JS
+Router.js
+api.js
+routes.js
+
+	
