@@ -14,6 +14,10 @@ ${reset}
 }
 body{
     background-color: ${mainColors.blackColor};
+    color: white;
+    letter-spacing: -1px;
+    word-break:break-all;
+    // don't break the word saute une ligne
 }
 
 ul, li {

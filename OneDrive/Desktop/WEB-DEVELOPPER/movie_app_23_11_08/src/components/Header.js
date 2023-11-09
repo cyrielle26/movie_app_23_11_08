@@ -3,13 +3,18 @@ import { Link } from "react-router-dom";
 import { routes } from "../routes";
 
 const SHeader = styled.header`
+width: 100%;
 padding: 20px 5%;
 display: flex;
 justify-content: space-between;
 align-items: center;
+z-index: 999;
 a{
     color: white;
 }
+position: fixed;
+top:0;
+left: 0;
 `;
 const Logo = styled.div`
 font-size: 24px;
@@ -42,9 +47,7 @@ export const Header = () => {
             <li>
             <Link to={routes.search}>Search</Link>
             </li>
-            <li>
-            <Link to={routes.home}>Home</Link>
-            </li>
+        
         </Nav>
         
     </SHeader>

@@ -1,9 +1,9 @@
 # Movie App 23_11_08
 
 ## installation
--[x] styled-components ______  npm install styled-components
+-[o] styled-components ______  npm install styled-components
 -[o] react-router-dom ______ npm i react-router-dom
--[x] styled-reset ______ npm i styled-reset
+-[o] styled-reset ______ npm i styled-reset
 -[] Title 관련 ______ 
 -[x] react-hook-form ______ npm install react-hook-form
 -[x] fort-awesome ______npm i --save @fortawesome/fontawesome-svg-core
@@ -15,9 +15,11 @@
 ## to do 
 -[o] ROUTER set up
 -[o] Components files set up
--[] api set up
--[] HOME component set up
--[] Detail component set up
--[] search component set up
+-[ ] api set up
+-[o] GlobalStyled set up
+-[o] Header UI set up
+-[o] HOME UI set up
+-[] Detail UI set up
+-[] search UI set up
 
 
