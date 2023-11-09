@@ -2,7 +2,7 @@ PORTOFOLIO / GROUP PROJECT /
 
 Movie_app
 
-1] SET UP PLAN
+1] SET UP PLAN / website map
 
 
  src
@@ -18,7 +18,7 @@ Movie_app
 			  |__ ...
 
 |	        
-components
+components ________ Header.js
 		   
 *********		   
 
