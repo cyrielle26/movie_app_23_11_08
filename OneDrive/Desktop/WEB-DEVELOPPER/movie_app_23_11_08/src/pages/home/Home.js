@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { nowPlaying } from "../../api";
+import { useEffect } from "react";
 
 
 const MainBanner = styled.div`
@@ -33,8 +34,32 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 39%, rgba(255,
 `;
 export const Home = () => {
 
-    /* nowPlaying();  error ==== you need a promise*/
+    /* nowPlaying();  error ==== you need a promise ---useEffect*/
+
+    //1. mount ___ api request
+    //2. asynchronized connection // need to use in const form== ----'  wait ----async // await ---- awaiting element '
+    //3. handle expection case
+
+   /*  useEffect(() => {
+        const getMovie = async () => {
+            const testing = await nowPlaying();
+        }; getMovie
+    }, []);   
     
+    OR*/
+
+    useEffect(() => {
+        (async () => {
+            
+            try {
+                const data =  await nowPlaying();
+            } catch (error){
+                console.log("error" + error);
+            }
+          
+        })();
+    }, []);
+
     return <div>
         <MainBanner>
             <BlackBg /> 
