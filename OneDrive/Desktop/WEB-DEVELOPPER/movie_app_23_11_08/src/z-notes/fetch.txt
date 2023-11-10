@@ -25,7 +25,12 @@ const options = {
 };
 
 fetch(url, options)
-  .then(res => res.json())
-  .then(json => console.log(json))
-  .catch(err => console.error('error:' + err));
+  .then(res => res.json())  //response
+  .then(json => console.log(json)) //preview
+  .catch(err => console.error('error:' + err)); //error response
+
+
+
+authentication
+access-token
 

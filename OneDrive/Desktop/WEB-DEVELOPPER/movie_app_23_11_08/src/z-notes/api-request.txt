@@ -1,0 +1,10 @@
+synchronized / asynchronized request
+==> cannot catch the data and link to the server
+you need a promise
+
+useEffect
+try - catch
+async - awite
+
+
+
