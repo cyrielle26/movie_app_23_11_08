@@ -2,6 +2,7 @@ const fetch = require('node-fetch');
 
 const baseUrl = 'https://api.themoviedb.org/3/';
 const nowPlayingUrl = baseUrl + "movie/now_playing" + "?language=en-US";
+
 const options = {
   method: 'GET',
   headers: {
