@@ -10,11 +10,11 @@ const options = {
   }
 };
 
-fetch(baseUrl, options)
+/* fetch(baseUrl, options)
   .then(res => res.json())
   .then(json => console.log(json))
-  .catch(err => console.error('error:' + err));
+  .catch(err => console.error('error:' + err)); */
 
-export const nowPlaying = fetch(nowPlayingUrl, options)
-  .then(res => res.json());
+export const nowPlaying = () => 
+  fetch(nowPlayingUrl, options).then((res) => res.json());
  

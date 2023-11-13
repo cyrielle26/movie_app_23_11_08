@@ -1,4 +1,7 @@
+import styled from "styled-components"
 
-export const MainBanner = () => {
+
+
+export const SMainBanner = () => {
     return<div></div>
 }

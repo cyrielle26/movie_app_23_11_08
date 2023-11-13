@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { nowPlaying } from "../../api";
 import { useEffect } from "react";
+import { useState } from "react";
 
 
-const MainBanner = styled.div`
+const MainBanner = styled.section`
 height: 80vh;
 background-color:lightgray;
 position: relative;
@@ -32,39 +33,56 @@ top:0;
 left: 0;
 background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 39%, rgba(255,255,255,0) 95%);
 `;
-export const Home = () => {
 
+
+export const Home = () => {
+    
     /* nowPlaying();  error ==== you need a promise ---useEffect*/
 
     //1. mount ___ api request
     //2. asynchronized connection // need to use in const form== ----'  wait ----async // await ---- awaiting element '
     //3. handle expection case
 
-   /*  useEffect(() => {
-        const getMovie = async () => {
-            const testing = await nowPlaying();
-        }; getMovie
-    }, []);   
-    
-    OR*/
 
-    useEffect(() => {
+     const [nowPlayingData, setNowPlayingData] = useState();
+     const [loading, setLoading] = useState(true);
+   
+
+     useEffect(() => {
         (async () => {
-            
-            try {
-                const data =  await nowPlaying();
-            } catch (error){
-                console.log("error" + error);
-            }
-          
+          try {
+            const { results } = await nowPlaying();
+            setNowPlayingData(results);
+            setLoading(false);
+          } catch (error) {
+            console.log("에러:" + error);
+          }
         })();
-    }, []);
+      }, []);
+    
+      console.log(loading);
+      console.log(nowPlayingData);
+    
+      return (
+        <>
+          {loading ? (
+            "loading..."
+          ) : (
+            <div>
+              {nowPlayingData && (
+                <MainBanner>
+                  <BlackBg />
+                  <h3>{nowPlayingData[0].title}</h3>
+                  <p>
+                    80년대에 아이들이 실종되고 폐업한지 오래된 프레디의 피자가게
+                    그곳의 야간 경비 알바를 하게 된 ‘마이크'는 캄캄한 어둠만이
+                    존재하는 줄 알았던 피자가게에서 살아 움직이는 피자가게...
+                  </p>
+                </MainBanner>
+              )}
+            </div>
+          )}
+        </>
+      );
 
-    return <div>
-        <MainBanner>
-            <BlackBg /> 
-            <h3>Studio PN</h3>
-            <p>first movie</p>
-        </MainBanner>
-    </div>
-}
+};
