@@ -12,6 +12,8 @@
 		  |    npm i --save @fortawesome/free-brands-svg-icons
 	  	  |____ npm i --save @fortawesome/react-fontawesome@latest
 - [X] fetch ____ npm install node-fetch@2 
+- [x] swiper ____ npm install swiper
+- [x] react-spinner __npm i react-spinners (https://www.davidhu.io/react-spinners/)
 
 ## to do 
 - [X] ROUTER set up
@@ -22,3 +24,5 @@
 - [X] HOME UI set up
 - [] Detail UI set up
 - [] search UI set up
+- [] Loading page
+- [] 404

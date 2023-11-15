@@ -3,6 +3,7 @@ import { IMG_URL } from "../../constants";
 
 
 
+
 const SMainBanner = styled.div`
 background: url(${IMG_URL}/original/${(props) => props.$bgUrl}) no-repeat center / cover;
 height: 80vh;

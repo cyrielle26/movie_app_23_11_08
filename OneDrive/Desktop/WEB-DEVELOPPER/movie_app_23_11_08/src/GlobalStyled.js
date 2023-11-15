@@ -17,6 +17,7 @@ body{
     color: white;
     letter-spacing: -1px;
     //word-break:break-all;
+    word-break:break-word;
     // don't break the word saute une ligne
 }
 
