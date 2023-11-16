@@ -4,8 +4,8 @@
 - [X] styled-components ______  npm install styled-components
 - [X] react-router-dom ______ npm i react-router-dom
 - [X] styled-reset ______ npm i styled-reset
-- [] Title 관련 ______ 
-- [] react-hook-form ______ npm install react-hook-form
+- [x] Title react helmet ____ npm i react-helmet
+- [x] react-hook-form ______ npm install react-hook-form
 - [x] fort-awesome ______npm i --save @fortawesome/fontawesome-svg-core
 		  |____npm i --save @fortawesome/free-solid-svg-icons
 		  |    npm i --save @fortawesome/free-regular-svg-icons
@@ -23,9 +23,11 @@
 - [] Loading
 - [X] Header UI set up
 - [] Header scroll event
-- [] Footer
+- [x] Footer
 - [X] HOME UI set up
 - [] Detail UI set up
 - [] search UI set up
 - [] Loading page
+- [] helmet 
+- [] helmet error 
 - [] 404

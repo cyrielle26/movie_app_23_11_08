@@ -12,7 +12,9 @@ const url = (urlName) => {
 // const popularUrl = baseUrl + "movie/popular" + "?language=en-US";
 // const topRatedUrl = baseUrl + "movie/top_rated" + "?language=en-US";
 // const upComingdUrl = baseUrl +  "movie/upcoming" + "?language=en-US";
- 
+// const detailUrl = baseUrl +  `movie/${id}` + "?language=en-US";
+
+
 const options = {
   method: 'GET',
   headers: {
@@ -35,3 +37,10 @@ export const popular = () =>
 export const topRated = () => fetch(url("movie/top_rated"), options).then((res) => res.json());
 
 export const upComing = () => fetch(url("movie/upcoming"), options).then((res) => res.json());
+
+export const movieDetail = (id) => {
+  const detailUrl = baseUrl +  `movie/${id}` + "?language=en-US";
+  return fetch(detailUrl, options).then((res) => res.json());
+}
+  
+  

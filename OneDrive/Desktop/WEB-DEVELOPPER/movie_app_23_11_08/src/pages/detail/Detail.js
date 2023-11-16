@@ -1,3 +1,22 @@
+import { useEffect } from "react";
+import { useParams } from "react-router-dom"
+import { movieDetail } from "../../api";
+
 export const Detail = () => {
-    return<div></div>
+    const {id} = useParams();
+    console.log(id);
+
+    useEffect(() => {
+        (async () => {
+            try {
+                const data = await movieDetail(id);
+                console.log(data);
+           } catch(error) {
+            console.error("Error :" + error);
+            /* console.log(isLoading); */
+        }
+        })()
+    },[])
+
+    return <div>detail</div>
 }

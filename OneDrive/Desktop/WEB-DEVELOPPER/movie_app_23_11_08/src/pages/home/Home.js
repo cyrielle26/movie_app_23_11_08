@@ -5,6 +5,7 @@ import { MainBanner } from "./MainBanner";
 import { ShowMovie } from "./ShowMovie";
 import { Loading } from "../../components/Loading";
 import { Layout } from "../../components/Layout";
+import { PageTitle } from "../../components/PageTitle";
 
 
 
@@ -71,7 +72,8 @@ export const Home = () => {
             ) : (
                 <div>
                     {nowPlayingData && (
-                        <>
+                            <>
+                                <PageTitle titleName={"Home"}/>
                             <MainBanner data={nowPlayingData[0]} />
                                 <Layout>
 
