@@ -20,6 +20,7 @@
 - [X] Components files set up
 - [X] api set up
 - [X] GlobalStyled set up
+- [] Loading
 - [X] Header UI set up
 - [X] HOME UI set up
 - [] Detail UI set up

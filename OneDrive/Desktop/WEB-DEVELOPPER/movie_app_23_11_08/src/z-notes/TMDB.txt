@@ -1,3 +1,0 @@
-TMDB
-
-https://developer.themoviedb.org/reference/intro/getting-started#try-it

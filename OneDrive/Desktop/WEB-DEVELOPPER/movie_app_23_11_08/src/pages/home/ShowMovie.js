@@ -5,12 +5,15 @@ import 'swiper/css';
 import { Link } from "react-router-dom";
 
 
-const Layout = styled.section`
-padding: 150px 5%;
+
+const Container = styled.section`
+margin-bottom: 80px;
 a{
     color:white;
 }
 `;
+
+
 const Title = styled.h3`
 font-size:50px;
 font-weight: 700;
@@ -61,20 +64,20 @@ const params = {
     }
 }
 
-export const ShowMovie = ({movieData}) => {
+export const ShowMovie = ({ movieData, titleName }) => {
     return (
-         <Layout>
-                <Title>Tendances actuelles</Title>
-                <Swiper  {...params} >                                                    
+            <Container>
+                <Title>{titleName}</Title>
+                <Swiper  {...params} >
                     {movieData.map((data) => (
                         <SwiperSlide>
                             <Link to={`/detail/${data.id}`}>
-                                    <CoverBg $bgUrl={data.poster_path} />
-                                    <MovieTitle>{data.title}</MovieTitle>
-                            </Link>    
+                                <CoverBg $bgUrl={data.poster_path} />
+                                <MovieTitle>{data.title}</MovieTitle>
+                            </Link>
                         </SwiperSlide>
                     ))}
-                </Swiper>
-            </Layout>
+                </Swiper>             
+        </Container>
     )
-}
+};
