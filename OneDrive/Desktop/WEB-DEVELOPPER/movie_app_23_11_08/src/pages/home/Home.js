@@ -78,7 +78,7 @@ export const Home = () => {
                                 <ShowMovie titleName={"Now Playing"} movieData={nowPlayingData} />
                                 <ShowMovie titleName={"Popular"} movieData={popData} />      
                                 <ShowMovie titleName={"Top rated"} movieData={topData} />      
-                                    <ShowMovie titleName={"Up Coming"} movieData={upData} /> 
+                                <ShowMovie titleName={"Up Coming"} movieData={upData} /> 
                                     
                                 </Layout>
                         </>

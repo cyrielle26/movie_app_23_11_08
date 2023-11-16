@@ -22,6 +22,8 @@
 - [X] GlobalStyled set up
 - [] Loading
 - [X] Header UI set up
+- [] Header scroll event
+- [] Footer
 - [X] HOME UI set up
 - [] Detail UI set up
 - [] search UI set up

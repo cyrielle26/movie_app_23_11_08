@@ -1,7 +1,17 @@
 import styled from "styled-components";
 
-export const Footer = () => {
-    return <SFooter>
+const Container = styled.footer`
+padding: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-top: 1px solid rgba(255,255,255, 0.6);`
 
-    </SFooter>
-}
+
+export const Footer = () => {
+    return (
+      <Container>
+        &copy; 2023 Cpcoding
+      </Container>
+    );
+  };

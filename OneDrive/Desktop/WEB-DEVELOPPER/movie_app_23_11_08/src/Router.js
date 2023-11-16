@@ -5,6 +5,7 @@ import { Detail } from "./pages/detail/Detail";
 import { Search } from "./pages/search/Search";
 import { PageNotFound } from "./pages/PageNotFound";
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 const Router = () => {
   return (
@@ -16,6 +17,7 @@ const Router = () => {
         <Route path={routes.search} element={<Search />} />
         <Route path="*/" element={<PageNotFound/>} />
       </Routes>
+      <Footer/>
     </HashRouter>
   );
 };
