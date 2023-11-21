@@ -20,14 +20,16 @@
 - [X] Components files set up
 - [X] api set up
 - [X] GlobalStyled set up
-- [] Loading
+- [x] Loading
 - [X] Header UI set up
 - [] Header scroll event
 - [x] Footer
 - [X] HOME UI set up
-- [] Detail UI set up
+- [x] Detail UI set up
 - [] search UI set up
-- [] Loading page
-- [] helmet 
-- [] helmet error 
+- [ ] header scroll event
+- [ ] scrollTo
+- [x] helmet 
+- [x] helmet error ---- uninstall -- install npm react-helmet-async  npm i react-helmet-async +
+<HelmetProvider>
 - [] 404

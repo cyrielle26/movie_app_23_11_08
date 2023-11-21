@@ -1,7 +1,7 @@
-import { Helmet } from "react-helmet"
+import { HelmetProvider } from "react-helmet-async";
 
 export const PageTitle = ({ titleName }) => {
-    return <Helmet>
+    return <HelmetProvider>
         <title>PNFLIX | {titleName}</title>
-    </Helmet>
+    </HelmetProvider>
 }

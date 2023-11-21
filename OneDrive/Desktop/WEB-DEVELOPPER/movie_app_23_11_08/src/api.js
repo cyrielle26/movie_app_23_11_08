@@ -2,17 +2,16 @@ const fetch = require('node-fetch');
  
 const baseUrl = 'https://api.themoviedb.org/3/';
 
+
 const url = (urlName) => {
   return baseUrl + `${urlName}` + "?language=en-US";
 }
 
-
- 
 // const nowPlayingUrl = baseUrl + "movie/now_playing" + "?language=en-US";
 // const popularUrl = baseUrl + "movie/popular" + "?language=en-US";
 // const topRatedUrl = baseUrl + "movie/top_rated" + "?language=en-US";
 // const upComingdUrl = baseUrl +  "movie/upcoming" + "?language=en-US";
-// const detailUrl = baseUrl +  `movie/${id}` + "?language=en-US";
+// const detailUrl = baseUrl +  `movie/${id}` + "?language=en-US"
 
 
 const options = {
@@ -28,6 +27,7 @@ const options = {
   .then(json => console.log(json))
   .catch(err => console.error('error:' + err)); */
 
+
 export const nowPlaying = () => 
   fetch(url("movie/now_playing"), options).then((res) => res.json());
 
@@ -38,9 +38,16 @@ export const topRated = () => fetch(url("movie/top_rated"), options).then((res) 
 
 export const upComing = () => fetch(url("movie/upcoming"), options).then((res) => res.json());
 
+// ********************************************************************************************
+
 export const movieDetail = (id) => {
   const detailUrl = baseUrl +  `movie/${id}` + "?language=en-US";
   return fetch(detailUrl, options).then((res) => res.json());
 }
+
+// you will have to use UseParams when calling the movieDetail const to another components
   
-  
+export const movieSearch = (keyword) => {
+  const searchUrl = baseUrl + `search/movie?query=${keyword}&language=en-US`;
+  return fetch(searchUrl, options).then((res) => res.json());
+}

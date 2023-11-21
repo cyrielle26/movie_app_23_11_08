@@ -70,7 +70,7 @@ export const ShowMovie = ({ movieData, titleName }) => {
                 <Title>{titleName}</Title>
                 <Swiper  {...params} >
                     {movieData.map((data) => (
-                        <SwiperSlide>
+                        <SwiperSlide key={data.id}>
                             <Link to={`/detail/${data.id}`}>
                                 <CoverBg $bgUrl={data.poster_path} />
                                 <MovieTitle>{data.title}</MovieTitle>
